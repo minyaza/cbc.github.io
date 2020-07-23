@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="Flick/flickity.css" media="screen">
+    <!--<link rel="stylesheet" href="Flick/flickity.css" media="screen">-->
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="glide/glide.core.min.css">
+    <link rel="stylesheet" href="glide/glide.theme.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="Flick/flickity.pkgd.min.js"></script>
+    <!--<script src="Flick/flickity.pkgd.min.js"></script>-->
     <title>CBCCUSTOMBUILDING</title>
 </head>
 <body>
@@ -88,16 +90,23 @@
      
      <!--Section C-->
      <section id="section-c" class="">
-        <div class="carousel" data-flickity='{ "wrapAround": true, "autoPlay": true }'>
-            
-            <img src="img/4.png" class="carousel-cell">
-            <img src="img/5.png" class="carousel-cell">
-            <img src="img/6.png" class="carousel-cell">
-            <img src="img/1.png" class="carousel-cell">
-            <img src="img/2.png" class="carousel-cell">
-           
+        <div class="glide">
+            <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                    <li class="glide__slide"><img src="img/1.png" alt=""></li>
+                    <li class="glide__slide"><img src="img/2.png" alt=""></li>
+                    <li class="glide__slide"><img src="img/3.png" alt=""></li>
+                    <li class="glide__slide"><img src="img/4.png" alt=""></li>
+                    <li class="glide__slide"><img src="img/5.png" alt=""></li>
+                    <li class="glide__slide"><img src="img/6.png" alt=""></li>
+
+                </ul>
+            </div>
+            <!--<div class="glide__arrows" data-glide-el="controls">
+                <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><</button>
+                <button class="glide__arrow glide__arrow--right" data-glide-dir=">">></button>
+            </div>-->
         </div>
-     
           
         
      
@@ -175,6 +184,18 @@
 
 
 <script src="/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+<script>
+    const config = {
+       type: 'carousel',
+       perView: 1,
+       autoplay: 3000,
+    }
+
+    
+    
+    new Glide(".glide", config).mount()
+  </script>
 
     
 </body>
