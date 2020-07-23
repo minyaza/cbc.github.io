@@ -1,0 +1,308 @@
+body {
+    margin: 0em;
+    background: black;
+    color: white;
+    line-height: 1;
+    font-size: 1em;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+
+/*HEADER*/
+
+#showcase {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.video-container video {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.video-container::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+.content {
+    z-index: 10;
+}
+
+#showcase img {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    
+}
+
+#showcase .btn {
+    display: inline-block;
+    padding: 20px 50px;
+    background: #0b9444;
+    color: white;
+    margin-top: 150px;
+    opacity: 0.8;
+}
+
+.btn:hover {
+    transform: scale(.98);
+}
+
+/*ABOUT*/
+
+#section-a {
+    padding: 2em 4em 2em;
+    background-color: black;
+}
+
+#section-a .content-wrap {
+    padding: 2em;
+}
+
+
+/*TESTIMONY*/
+
+#section-b {
+    padding: 2em 1em 1em;
+}
+
+#section-b ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#section-b li {
+    margin-bottom: 1em;
+    background: #111;
+    color: white;
+    list-style: none;
+    padding: 1em;
+}
+
+#section-b .card-content {
+    padding: 2em;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+}
+
+/*IMAGES*/
+
+#section-c {
+    background: black;
+    color: white;
+    padding: 1em;
+}
+
+
+  
+.carousel-cell {
+
+    margin-right: 10px;
+    background: #8C8;
+    border-radius: 5px;
+    counter-increment: carousel-cell;
+    object-fit: cover;
+    width: 900px;
+}
+  
+  /* cell number */
+  .carousel-cell:before {
+    display: block;
+    text-align: center;
+    content: counter(carousel-cell);
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+  }
+  * { box-sizing: border-box; }
+
+
+
+
+
+
+/*CONTACT FORM*/
+
+#section-d {
+    padding: 2em 1em 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+}
+
+
+.contact-form {
+
+    background: #111;
+    
+    padding: 1em;
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 0 0 20px #000000b3;
+    
+  }
+
+  .contact-form h2 {
+    margin-top: 0;
+  }
+
+  .txtb {
+   
+    margin: 8px 0;
+    padding: 12px 18px;
+  }
+
+  .txtb label {
+    display: block;
+    text-align: left;
+    color: #333;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+
+  .txtb input,.txtb textarea {
+    width: 100%;
+    border: none;
+    background: #222;
+    outline: none;
+    font-size: 18px;
+    margin-top: 6px;
+    color: white;
+    padding-bottom: 2em;
+    font-size: 20px;
+  }
+
+  #section-d .btn {
+    display: inline-block;
+    background: #0b9444;
+    padding: 14px 0;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 8px;
+    width: 100%;
+  }
+
+.contact-form2 {
+    background: #111;
+    padding-top: 5em;
+}
+
+
+
+
+/*FOOTER*/
+
+#main-footer {
+    padding: 1em;
+    background: black;
+}
+
+#main-footer .content-wrap {
+    padding: 2em;
+    background: #111;
+}
+
+#main-footer li {
+    list-style: none;
+    display: inline-block;
+    color: #0b9444;
+    margin: 10px 10px;
+    font-size: 40px;
+    padding: 10px 10px;
+    border: 4px solid;
+    
+    transition: .5s;
+}
+
+#main-footer li:hover {
+    color: black;
+    border: 4px solid;
+    transition: 0.5s;
+}
+
+
+
+/*MEDIA QUERIES*/
+
+@media (max-width: 900px) {
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr ;
+    }
+}
+    
+@media (max-width: 1100px) {
+    #section-a {
+        padding: 2em 1em 2em;
+    }
+}
+
+
+
+@media screen and (max-width: 880px){
+	.contact-box{
+		grid-template-columns: 1fr;
+	}
+	.left{
+		height: 200px;
+	}
+}
+
+
+@media (max-width: 900px) {
+    #section-d {
+      display: grid;
+      grid-template-columns: 1fr ;
+    }
+}
