@@ -37,27 +37,7 @@ video {
     z-index: 10;
 }
 
-#showcase img {
-    width: 50%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    
-}
 
-#showcase .btn {
-    display: inline-block;
-    padding: 20px 50px;
-    background: #0b9444;
-    color: white;
-    margin-top: 150px;
-    opacity: 0.8;
-}
-
-.btn:hover {
-    transform: scale(.98);
-}
 
 /*ABOUT*/
 
